@@ -4,7 +4,7 @@
 #
 Name     : Paste
 Version  : 2.0.2
-Release  : 14
+Release  : 15
 URL      : https://pypi.python.org/packages/source/P/Paste/Paste-2.0.2.tar.gz
 Source0  : https://pypi.python.org/packages/source/P/Paste/Paste-2.0.2.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
