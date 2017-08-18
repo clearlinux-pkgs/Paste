@@ -4,9 +4,9 @@
 #
 Name     : Paste
 Version  : 2.0.3
-Release  : 25
-URL      : https://pypi.python.org/packages/source/P/Paste/Paste-2.0.3.tar.gz
-Source0  : https://pypi.python.org/packages/source/P/Paste/Paste-2.0.3.tar.gz
+Release  : 26
+URL      : http://pypi.debian.net/Paste/Paste-2.0.3.tar.gz
+Source0  : http://pypi.debian.net/Paste/Paste-2.0.3.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
 Group    : Development/Tools
 License  : MIT
@@ -26,10 +26,9 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-Paste provides several pieces of "middleware" (or filters) that can be nested
 to build web applications.  Each piece of middleware uses the WSGI (`PEP 333`_)
-interface, and should be compatible with other middleware based on those
-interfaces.
+        interface, and should be compatible with other middleware based on those
+        interfaces.
 
 %package python
 Summary: python components for the Paste package.
@@ -44,8 +43,11 @@ python components for the Paste package.
 %setup -q -n Paste-2.0.3
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1489026120
+export SOURCE_DATE_EPOCH=1503071279
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -53,16 +55,20 @@ python3 setup.py build -b py3
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
+PYTHONPATH=%{buildroot}/usr/lib/python3.6/site-packages python3 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1489026120
+export SOURCE_DATE_EPOCH=1503071279
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+echo ----[ mark ]----
+cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
+echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*
