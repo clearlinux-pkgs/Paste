@@ -4,7 +4,7 @@
 #
 Name     : Paste
 Version  : 2.0.3
-Release  : 31
+Release  : 32
 URL      : http://pypi.debian.net/Paste/Paste-2.0.3.tar.gz
 Source0  : http://pypi.debian.net/Paste/Paste-2.0.3.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
