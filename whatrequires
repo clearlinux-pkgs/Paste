@@ -1,2 +1,8 @@
 # This file contains recursive sources that require this package
+barbican
+cinder
+glance
+neutron
+nova
+oslo.service
 pysaml2
