@@ -4,7 +4,7 @@
 #
 Name     : Paste
 Version  : 3.2.3
-Release  : 58
+Release  : 59
 URL      : https://files.pythonhosted.org/packages/2f/61/4001329b694b8c7c6720f1c1effc9575cc1a83d4e3f6db2e568a58343dcd/Paste-3.2.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2f/61/4001329b694b8c7c6720f1c1effc9575cc1a83d4e3f6db2e568a58343dcd/Paste-3.2.3.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
@@ -13,22 +13,21 @@ License  : MIT
 Requires: Paste-license = %{version}-%{release}
 Requires: Paste-python = %{version}-%{release}
 Requires: Paste-python3 = %{version}-%{release}
-Requires: python-openid
 Requires: six
 BuildRequires : buildreq-distutils3
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
 BuildRequires : pytest-runner
-BuildRequires : python-openid
 BuildRequires : six
 BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-*Paste is in maintenance mode and recently moved from bitbucket to github.
-Patches are accepted to keep it on life support, but for the most part, please
-consider using other options.*
+Paste provides several pieces of "middleware" (or filters) that can be nested
+to build web applications. Each piece of middleware uses the WSGI (PEP 333)
+interface, and should be compatible with other middleware based on those
+interfaces.
 
 %package license
 Summary: license components for the Paste package.
@@ -66,8 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575280727
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1576223759
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
