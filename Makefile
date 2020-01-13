@@ -1,5 +1,5 @@
 PKG_NAME := Paste
-URL = https://files.pythonhosted.org/packages/b5/97/cdab2bed8d763854def70ba0277e337ff2ee2c83b3cee5ad3918d5bd9f28/Paste-3.2.5.tar.gz
+URL = https://files.pythonhosted.org/packages/d1/cb/3b9b01b7ec1f8490e3f652f3070ef029de98c4f9760e1612f0f0f3f84e59/Paste-3.2.6.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
