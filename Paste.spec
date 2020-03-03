@@ -4,7 +4,7 @@
 #
 Name     : Paste
 Version  : 3.4.0
-Release  : 66
+Release  : 67
 URL      : https://files.pythonhosted.org/packages/79/4a/45821b71dd40000507549afd1491546afad8279c0a87527c88776a794158/Paste-3.4.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/79/4a/45821b71dd40000507549afd1491546afad8279c0a87527c88776a794158/Paste-3.4.0.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
@@ -50,6 +50,7 @@ python components for the Paste package.
 Summary: python3 components for the Paste package.
 Group: Default
 Requires: python3-core
+Provides: pypi(Paste)
 
 %description python3
 python3 components for the Paste package.
@@ -64,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581526084
+export SOURCE_DATE_EPOCH=1583200925
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
