@@ -4,7 +4,7 @@
 #
 Name     : Paste
 Version  : 3.4.4
-Release  : 73
+Release  : 74
 URL      : https://files.pythonhosted.org/packages/f5/2f/5611a0e7915fb09e18ceaac7886d0ac90b6d63e96e0ad32220f9bc724970/Paste-3.4.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f5/2f/5611a0e7915fb09e18ceaac7886d0ac90b6d63e96e0ad32220f9bc724970/Paste-3.4.4.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
